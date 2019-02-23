@@ -1,0 +1,14 @@
+<IfModule mod_rewrite.c>
+#Activar rewrite
+RewriteEngine on
+#Pagina personalizada de 404
+ErrorDocument 404 http://localhost/master-php/proyecto-php-poo-mvc/error/
+
+#Script Filename
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+
+#Reescribir las urls
+RewriteRule ^(.*)/(.*) index.php?controller=$1&method=$2
+
+</IfModule>
