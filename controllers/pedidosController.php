@@ -2,9 +2,10 @@
 
 class pedidosController
 {
-    public function index()
+    public function hacer()
     {
-        echo "Controlador de pedidos";
+        //Carga la vista para terminar el pedido
+        require_once "views/pedidos/hacer.php";
     }
 }
 

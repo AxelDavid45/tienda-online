@@ -2,7 +2,7 @@
     <h1><?= $pro->nombre ?></h1>
 <div class="product-single">
     <?php if ($pro->imagen != null): ?>
-        <img class="m-8" src="<?= base_url . $pro->imagen ?>" alt="">
+        <img class="m-8 img-single" src="<?= base_url . $pro->imagen ?>" alt="">
     <?php else: ?>
         <strong class="m-8">Imagen no disponible</strong>
     <?php endif; ?>

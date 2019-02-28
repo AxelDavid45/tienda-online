@@ -265,6 +265,9 @@ button {
     align-items: center;
     text-align: center;
 }
+.img-single {
+    max-height: 250px;
+}
 
 .nombre-prod {
     font-size: 3rem;
@@ -336,6 +339,33 @@ button {
 
 .product a:hover {
     color: #cccccc;
+}
+
+/*Carrito*/
+.table-carrito {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+.table-carrito th, td {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    padding: 8px;
+}
+.img-carrito {
+    max-height: 100px;
+}
+.card {
+    margin: 10px auto;
+    padding: 30px;
+    /*border: 1px solid #ccc;*/
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 360px;
+    box-shadow: 1px 2px 5px #c9c9c9
+
 }
 
 /*footer*/

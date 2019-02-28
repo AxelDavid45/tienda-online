@@ -7,8 +7,11 @@ class  carritoController
     public function index()
     {
         if (isset($_SESSION['carrito'])) {
-            var_dump($_SESSION['carrito']);
+            $sesion_carrito = $_SESSION['carrito'];
+        } else {
+            $sesion_carrito = false;
         }
+        require_once "views/carrito/index.php";
         // echo "Controlador carrito, metodo index";
     }
 

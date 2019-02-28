@@ -1,4 +1,16 @@
 <aside id="lateral">
+    <div id="carrito" class="block-aside">
+        <h3 class="tit-block-aside">
+            Mi carrito
+        </h3>
+        <?php $stats = helpers::stats(); ?>
+        <ul class="gestion">
+            <li><a href="<?= base_url ?>carrito/index"> <i class="fas fa-list-ol"></i> Productos (<?= $stats['nProductos'];?>)</a></li>
+            <li><a href="<?= base_url ?>carrito/index"><i class="fas fa-coins"></i> Total: $<?=$stats['total']; ?></a></li>
+            <li>
+                <a href="<?= base_url ?>carrito/index"><i class="far fa-eye"></i> Ver carrito</a></li>
+        </ul>
+    </div>
     <div id="login" class="block-aside">
         <?php if (!isset($_SESSION['user_data'])): ?>
             <h3 class="tit-block-aside">Inicia sesión</h3>
@@ -11,7 +23,7 @@
                     <p>Contraseña:</p>
                     <input type="password" name="password" required>
                 </label>
-                <a href="<?=base_url?>usuarios/registro">No tengo una cuenta</a>
+                <a href="<?= base_url ?>usuarios/registro">No tengo una cuenta</a>
                 <input type="submit" value="Enviar">
             </form>
 
@@ -22,7 +34,7 @@
             <?php if (isset($_SESSION['admin'])): ?>
                 <li>
                     <i class="fas fa-sliders-h"></i>
-                    <a href="<?=base_url?>productos/gestion">Gestionar productos</a>
+                    <a href="<?= base_url ?>productos/gestion">Gestionar productos</a>
                 </li>
                 <li>
                     <i class="fas fa-sliders-h"></i>
@@ -30,7 +42,7 @@
                 </li>
                 <li>
                     <i class="fas fa-align-justify"></i>
-                    <a href="<?= base_url?>/categorias/index">Gestionar categorias</a>
+                    <a href="<?= base_url ?>/categorias/index">Gestionar categorias</a>
                 </li>
             <?php else: ?>
                 <li>
